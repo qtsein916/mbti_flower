@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ee">
+  <title>꽃말은 핑계고 · 식물 성향 테스트</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead"><span><span class="mark" aria-hidden="true">✿</span> 꽃말은 핑계고</span><span class="edition">THE PERSONALITY GARDEN</span></header>
+    <main>
+      <section id="start" class="hero">
+        <div class="intro">
+          <p class="eyebrow"><span class="dot"></span> MBTI 식물 성향 테스트</p>
+          <h1>꽃말은<br><em>핑계고<span>.</span></em></h1>
+          <p class="lead">오늘의 당신을 닮은 식물을 찾아보세요.<br>열여섯 가지 일상 속 선택이<br>나만의 꽃말로 피어납니다.</p>
+          <button id="start-button" class="button primary">내 꽃말 찾아보기 <span aria-hidden="true">↗</span></button>
+          <p class="facts">16문항 <span>·</span> 약 3분 <span>·</span> 16가지 식물</p>
+        </div>
+        <figure class="hero-art">
+          <img src="assets/garden-hero.jpg" alt="연보라색 배경에 펼쳐진 보라색과 노란색 꽃다발">
+          <span class="art-number" aria-hidden="true">FIG. 01</span><span class="art-spark" aria-hidden="true">✧</span>
+          <figcaption>각자의 속도로, 각자의 모양으로.</figcaption>
+        </figure>
+      </section>
+
+      <section id="quiz" class="quiz panel" hidden>
+        <div class="progress-label"><span class="eyebrow">나의 꽃말을 찾는 중</span><span id="counter"></span></div>
+        <progress id="progress" max="16" value="0" aria-label="답한 문항 수"></progress>
+        <p id="category" class="category"></p>
+        <h2 id="question" tabindex="-1"></h2>
+        <p class="hint">평소 내 모습에 더 가까운 쪽을 골라 주세요.</p>
+        <div id="choices" class="choices" role="group" aria-labelledby="question"></div>
+        <div class="quiz-nav"><button id="back" class="button secondary">← 이전</button><button id="next" class="button primary" disabled>다음 →</button></div>
+      </section>
+
+      <section id="result" class="result panel" hidden>
+        <div class="result-visual"><div id="plant-photo" class="plant-photo" role="img"></div><span id="specimen" class="specimen" aria-hidden="true"></span></div>
+        <div class="result-content">
+          <p class="eyebrow"><span class="dot"></span> 나를 닮은 식물 <span id="type" class="type"></span></p>
+          <h2 id="result-title" tabindex="-1"></h2>
+          <p id="flower-meaning" class="flower-meaning"></p>
+          <p id="description" class="description"></p>
+          <p id="answer-hint" class="answer-hint" hidden></p>
+          <div class="result-actions"><button id="share" class="button primary">결과 공유하기 <span aria-hidden="true">↗</span></button><button id="restart" class="button secondary">다시하기</button></div>
+          <div id="share-fallback" hidden><label for="share-text">아래 결과를 복사해 공유하세요.</label><textarea id="share-text" rows="3" readonly></textarea></div>
+          <p id="share-status" class="share-status" role="status"></p>
+        </div>
+      </section>
+    </main>
+    <footer><span>✳ &nbsp; BOTANICAL NOTES</span><span>꽃말은 이 테스트에서 만든 창작 꽃말이에요.</span></footer>
+  </div>
+</body>
+</html>
